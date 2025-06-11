@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About | In the Margins</title>
+<link rel="shortcut icon" href="https://testing-systems.github.io//favicon.ico?v=1749647647506">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://testing-systems.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="About | In the Margins - Atom Feed" href="https://testing-systems.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="Welcome! This is a spot for curious minds who enjoy poking around the mundane things.
+Margins, Explained
+In the Margins ..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://testing-systems.github.io/">
+  <img class="avatar" src="https://testing-systems.github.io//images/avatar.png?v=1749647647506" alt="">
+  </a>
+  <h1 class="site-title">
+    In the Margins
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Latest
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Collection
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Topics
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              About
+            </h2>
+            <div class="post-info">
+              <span>
+                01-25-2019
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>Welcome! This is a spot for curious minds who enjoy poking around the mundane things.</p>
+<h2 id="margins-explained">Margins, Explained</h2>
+<p><em>In the Margins</em> is about poking around the small stuff — digging into little stories and the odd detail that probably won't change your life, but might make you look at your coffee cup a little differently.</p>
+<h2 id="how-we-read">How We Read</h2>
+<p>Inspired by Niklas Luhmann's systems theory, we follow words and concepts as living currents within vast social networks — tracing how meanings shift, echo, and rewrite themselves over time and space.</p>
+<h2 id="say-hello">📬 Say Hello</h2>
+<p>We'd love to hear from you — whether it's a question, a comment, or just a quick hello.</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#margins-explained">Margins, Explained</a></li>
+<li><a href="#how-we-read">How We Read</a></li>
+<li><a href="#say-hello">📬 Say Hello</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank"> Gridea</a>
+  <a class="rss" href="https://testing-systems.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

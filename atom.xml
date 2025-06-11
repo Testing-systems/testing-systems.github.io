@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://testing-systems.github.io/</id>
+    <title>In the Margins</title>
+    <updated>2025-06-11T13:15:29.974Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://testing-systems.github.io/"/>
+    <link rel="self" href="https://testing-systems.github.io/atom.xml"/>
+    <logo>https://testing-systems.github.io/images/avatar.png</logo>
+    <icon>https://testing-systems.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, In the Margins</rights>
+</feed>
